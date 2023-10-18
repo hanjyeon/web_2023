@@ -8,42 +8,51 @@
             width: 100%;
             padding-left: 20px
         }
+        .c1 {font-weight: bold;
+    background-color: lightblue;
+    width: 800px;
+    padding-left: 10px;}
+        .c2 {margin-left: 8px;
+    text-align: right;
+    width: 130px;
+            }
+        .c3 {margin-left: 200px;}
     </style>
 </head>
 <body>
     <h3>취업 정보 계정 만들기</h3>
     <form name="usr_info" method="post" action="{% url 'createform' %}">
-        <p>* 필수 입력 항목</p>
-        <p>기본 정보</p>
-        <label for="name">이름* <input type="text" id="name" name="name" size="8"></label><br>
-        <label for="email">이메일* <input type="email" id="email" name="email" size="15" placeholder="id@domain_name"></label><br>
-        <label for="secret">암호* <input type="password" id="secret" name="secret" size="12"></label><br>
-        <label for="secret_check">암호 확인* <input type="password" id="secret_check" name="secret_check" size="12"></label><br>
-        <label for="phone">모바일 폰* <input type="tel" id="phone" name="phone" size="13" placeholder="010-0000-0000"></label><br>
-        <label for="homepage">개인 홈페이지 <input type="url" id="homepage" name="homepage" size="30" placeholder="http://"></label><br>
-        <label for="address">주소 <input type="text" id="address" name="address" size="30"></label><br>
-        <p>학력</p>
-        <label for="school">학교 명* <input type="text" id="school" name="school" size="12"></label><br>
-        <label for="major">전 공* <input type="text" id="major" name="major" size="12"></label><br>
-        <label for="graduation">졸업 여부*:
+        <p style="color:red; font-size:10px"> * 필수 입력 항목</p>
+        <p class="c1">기본 정보</p>
+        <label  class="c2" for="name">이름* <input type="text" id="name" name="name" size="8"></label ><br>
+        <label  class="c2" for="email">이메일* <input type="email" id="email" name="email" size="15" placeholder="id@domain_name"></label ><br>
+        <label class="c2" for="secret">암호* <input type="password" id="secret" name="secret" size="12"></label><br>
+        <label class="c2" for="secret_check">암호 확인* <input type="password" id="secret_check" name="secret_check" size="12"></label><br>
+        <label class="c2" for="phone">모바일 폰* <input type="tel" id="phone" name="phone" size="13" placeholder="010-0000-0000"></label><br>
+        <label class="c2" for="homepage">개인 홈페이지 <input type="url" id="homepage" name="homepage" size="30" placeholder="http://"></label><br>
+        <label class="c2" for="address">주소 <input type="text" id="address" name="address" size="30"></label><br>
+        <p class="c1">학력</p>
+        <label class="c2" for="school">학교 명* <input type="text" id="school" name="school" size="12"></label><br>
+        <label class="c2" for="major">전 공* <input type="text" id="major" name="major" size="12"></label><br>
+        <label class="c2" for="graduation">졸업 여부*:
             <select name="graduation" id="graduation">
                 <option value="0">___선택___</option>
                 <option value="1">졸업예정</option>
                 <option value="2">졸업</option>
             </select>
         </label><br>
-        <label for="graduation_date">졸업(예정)일 <input type="date" id="graduation_date"></label><br>
-        <p>업무 경력</p>
-        <label for="enterprise_name">근무업체명 <input type="text" id="enterprise_name" name="enterprise_name" size="20"></label><br>
-        <label for="position">직 위 <input type="text" id="position" name="position" size="10"></label><br>
-        <label for="comments">담당 업무</label>
+        <label class="c2" for="graduation_date">졸업(예정)일 <input type="date" id="graduation_date"></label><br>
+        <p class="c1">업무 경력</p>
+        <label class="c2" for="enterprise_name">근무업체명 <input type="text" id="enterprise_name" name="enterprise_name" size="20"></label><br>
+        <label class="c2" for="position">직 위 <input type="text" id="position" name="position" size="10"></label><br>
+        <label class="c2" for="comments">담당 업무</label>
         <textarea id="comments" name="comments" cols="80" rows="10">
             이전 업체에서 담당한 업무를 기술하시오.
         </textarea><br>
-        <label for="work_years">근무년수 <input type="number" id="work_years" min="0" max="10" step="0.5"> 년</label><br>
-        <p>자기 소개서</p>
+        <label class="c2" for="work_years">근무년수 <input type="number" id="work_years" min="0" max="10" step="0.5"> 년</label><br>
+        <p class="c1">자기 소개서</p>
         <label for="profile">첨부파일 <input type="file" id="profile"></label><br>
-        <div style="padding-left: 20%">
+        <div class="c3" style="padding-left: 20%">
             <input type="submit" value="제 출">
             <input type="reset" value="재작성">
         </div>
